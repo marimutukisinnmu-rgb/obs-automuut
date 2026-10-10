@@ -124,7 +124,13 @@ def main() -> int:
         print("PikaStream Key は Windows 専用です。")
         return 1
 
+    first_run = not CONFIG_PATH.exists()
     create_config_template()
+    if first_run:
+        print(f"設定ファイルを作成しました: {CONFIG_PATH}")
+        print("config.ini を OBS の設定に合わせて編集してから、もう一度起動してください。")
+        return 0
+
     try:
         settings = load_config()
     except (OSError, ValueError, RuntimeError, configparser.Error) as exc:
