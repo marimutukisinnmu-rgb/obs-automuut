@@ -1,0 +1,9 @@
+# Local OBS WebSocket credentials
+config.ini
+
+# Runtime log
+pistream_key.log
+
+# Python cache
+__pycache__/
+*.py[cod]
