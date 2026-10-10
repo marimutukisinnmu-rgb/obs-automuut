@@ -1,0 +1,6 @@
+[obs]
+host = 127.0.0.1
+port = 4455
+password =
+input_name = デスクトップ音声
+poll_interval = 0.25
